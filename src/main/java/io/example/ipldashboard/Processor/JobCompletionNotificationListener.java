@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.HashMap;
@@ -26,7 +25,7 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
 //    this.jdbcTemplate = jdbcTemplate;
 //  }
 
-  @Autowired
+  
   public JobCompletionNotificationListener(EntityManager em) {
     this.em = em;
   }
