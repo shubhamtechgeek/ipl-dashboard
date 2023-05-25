@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import io.example.ipldashboard.Entity.MatchInput;
 import io.example.ipldashboard.Model.Match;
+
 import org.springframework.batch.item.ItemProcessor;
 
 public class DataProcessor implements ItemProcessor<MatchInput, Match> {
@@ -11,6 +12,7 @@ public class DataProcessor implements ItemProcessor<MatchInput, Match> {
     
 
     @Override
+    
     public Match process(final MatchInput matchInput) throws Exception {
         Match match = new Match();
 
