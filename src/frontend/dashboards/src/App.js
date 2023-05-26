@@ -1,10 +1,25 @@
 import './App.css';
-import { TeamPage } from './pages/TeamPage';
+import { MatchPage } from './pages/MatchPages';
+import {TeamPage} from './pages/TeamPage.js';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <TeamPage />
+      <Router>
+      
+      <Routes>
+        
+          <Route path="/teams/:teamName/matches/:year"  element = {<MatchPage />} />
+          <Route path="/teams/:teamName"  element = {<TeamPage />} />
+        
+        
+        
+        
+      </Routes>
+      
+      </Router>
+   
     </div>
   );
 }
